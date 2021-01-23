@@ -5,7 +5,7 @@ import { SharedTestingModule } from '@tmo/shared/testing';
 import { BooksFeatureModule } from '../books-feature.module';
 import { BookSearchComponent } from './book-search.component';
 
-describe('ProductsListComponent', () => {
+describe('BookSearchItemComponent', () => {
   let component: BookSearchComponent;
   let fixture: ComponentFixture<BookSearchComponent>;
 
