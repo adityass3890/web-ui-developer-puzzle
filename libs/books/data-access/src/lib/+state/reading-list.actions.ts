@@ -27,8 +27,18 @@ export const confirmedAddToReadingList = createAction(
   props<{ book: Book }>()
 );
 
+export const undoAddToReadingList = createAction(
+  '[Reading List API] Undo add to list',
+  props<{ book: Book }>()
+);
+
 export const removeFromReadingList = createAction(
   '[Books Search Results] Remove from list',
+  props<{ item: ReadingListItem }>()
+);
+
+export const undoRemoveFromReadingList = createAction(
+  '[Reading List API] Undo remove from list',
   props<{ item: ReadingListItem }>()
 );
 
@@ -39,5 +49,25 @@ export const failedRemoveFromReadingList = createAction(
 
 export const confirmedRemoveFromReadingList = createAction(
   '[Reading List API] Confirmed remove from list',
+  props<{ item: ReadingListItem }>()
+);
+
+export const toggleMarkedAsRead = createAction(
+  '[Reading List API] Mark as read',
+  props<{ item: ReadingListItem }>()
+);
+
+export const failedToggleMarkedAsRead = createAction(
+  '[Reading List API] Failed mark as read',
+  props<{ item: ReadingListItem }>()
+);
+
+export const undoToggledMarkedAsRead = createAction(
+  '[Reading List API] Undo toggled marked as read',
+  props<{ item: ReadingListItem }>()
+);
+
+export const confirmedMarkedAsRead = createAction(
+  '[Reading List API] Confirmed mark as read',
   props<{ item: ReadingListItem }>()
 );
